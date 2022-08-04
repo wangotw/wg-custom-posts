@@ -1,0 +1,76 @@
+/* Tabs */
+
+ul#tabs-nav {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  overflow: auto;
+}
+ul#tabs-nav li {
+  float: left;
+  font-weight: bold;
+ 
+}
+ul#tabs-nav li a {
+  text-decoration: none;
+  padding: 10px 30px;
+  margin: 5px;
+  border: 1px solid #9D212B;
+  border-radius: 5px;
+  box-shadow: 2px 2px #238cb3;
+}
+ul#tabs-nav li a.active {
+  background-color: #9D212B;
+}
+
+/*Company*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+}
+.grid-item {
+  background: #DEC372;
+}
+.grid-item-img img {
+  aspect-ratio: 4/3;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.grid-item-text p {
+  color: black;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  margin: 0px;
+  padding: 10px
+}
+a {
+  text-decoration: none;
+}
+@media screen and (max-width: 40rem) {
+  .wg-container {
+    width: auto;
+    margin: auto;
+
+    }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 6px;
+    padding: 6px;
+    width: 100%;
+  }
+	ul#tabs-nav li {
+		padding: 5px;
+	}
+  ul#tabs-nav li a {
+		margin: 5px;
+		font-size: 5px;
+		padding: 10px;
+	}
+
+}

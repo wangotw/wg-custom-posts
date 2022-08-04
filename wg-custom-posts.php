@@ -26,7 +26,6 @@ function main_function( $userInput ) {
 	include_once plugin_dir_path( __FILE__ ) . 'includes/cptQuery.php';
 	include_once plugin_dir_path( __FILE__ ) . 'includes/findTaxSlug.php';
 	include_once plugin_dir_path( __FILE__ ) . 'includes/getNameContent.php';
-	include_once plugin_dir_path( __FILE__ ) . 'includes/findSlugName.php';
 	include_once plugin_dir_path( __FILE__ ) . 'includes/getTaxContent.php';
 	
 	//可控制引數
