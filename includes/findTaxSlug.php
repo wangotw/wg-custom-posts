@@ -44,7 +44,7 @@ function findTaxSlug($userInput, $cptSlug, $cptTaxSlug, $mode)
 						$i++;
 					}		
 				}
-				if ($findCompareSlug !== null)
+				if (!empty($findCompareSlug))
 				{
 					return $findCompareSlug;//傳回slug
 				}
