@@ -7,7 +7,7 @@ function cptQuery( $cptSlug, $taxSlug, $cptTaxSlug, $post_per_page, $mode ) {
 		case 1:
 			$content = [[[]]]; //儲存前端呈現資料
 			$city = ''; //儲存有資料的城市
-			$exist_compony = [];
+			$exist_company = []; //儲存已存在公司，用以比對
 			foreach ($taxSlug as $value)
 			{
 				$splitArray = explode('-',$value); //以"-"分割，如：txg-land-second-mortgage  [0]->txg [1]->land ...
@@ -25,12 +25,12 @@ function cptQuery( $cptSlug, $taxSlug, $cptTaxSlug, $post_per_page, $mode ) {
 					while ($queryCategory -> have_posts()) {
 						$queryCategory -> the_post(); //指向下一篇
 						$title = get_the_title();
-						if ( in_array( $title, $exist_compony ) == False ){
+						if ( in_array( $title, $exist_company ) == False ){
 							$content[$city][$i]['featuredImg'] = get_the_post_thumbnail_url(get_the_ID(), 'full');  //取得特色圖片
 							$content[$city][$i]['title'] = $title; //取得標題
 							$content[$city][$i]['link'] = get_the_permalink(); //取得網址
 							$i++;
-							array_push( $exist_compony, $title );
+							array_push( $exist_company, $title );
 						}
 					}
 				}
