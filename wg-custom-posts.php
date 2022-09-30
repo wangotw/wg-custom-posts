@@ -12,6 +12,8 @@ Author URI: https://www.iwangoweb.com/about/
 //v4 20220324 新增CSS前端整合
 //v5 20220408 新增使用者輸入參數name，tax用於完全比對，name用於服務項目模糊比對
 //v6 20220419 分割不同功能程式至其他檔案，微調程式撰寫風格
+//v7 20220819 修正 cptQuery.php : 新增加入資料比對，取得不重複資料
+//v8 20220926 修改模糊比對顯示邏輯，修改為按照地區顯示全台縣市金融機構。
 //一共5個function  分別用途：1.主程式整合 2.(後端)使用者輸入name轉成slug 3.(後端)轉換後的slug進行搜尋商家 4.(前端)顯示商家資訊 5.引入外部CSS檔
 /*整合用主程式*/
 
@@ -77,13 +79,14 @@ add_shortcode( "loan-co", "main_function" ); //註冊shortcode
 
 /*加入css檔*/
 function wg_custom_posts_css() {
-	echo "<link rel=stylesheet type='text/css' href='" . plugin_dir_url( __FILE__ ) . "assets/css/wg-cpt-grid_beta.css'>";
+	echo "<link rel=stylesheet type='text/css' href='" . plugin_dir_url( __FILE__ ) . "assets/css/wg-cpt-grid.css'>";
 }
 add_action( 'wp_head', 'wg_custom_posts_css' );
 
 /*加入js檔*/
 function wg_custom_posts_js() {
-	echo "<script type='text/javascript' src='"  . plugin_dir_url( __FILE__ ) . "assets/js/tabs.js'>";
+	echo "<script src='https://code.jquery.com/jquery-3.6.1.slim.js' integrity='sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=' crossorigin='anonymous'></script>";
+	echo "<script type='text/javascript' src='"  . plugin_dir_url( __FILE__ ) . "assets/js/tabs.js'></script>";
 }
 add_action( 'wp_footer', 'wg_custom_posts_js' );
 ?>

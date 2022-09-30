@@ -19,7 +19,7 @@ ul#tabs-nav li {
 }
 ul#tabs-nav li:hover,
 ul#tabs-nav li.active {
-  background-color: yellow;
+  background-color: red;
 }
 #tabs-nav li a {
   text-decoration: none;
