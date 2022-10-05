@@ -33,7 +33,7 @@ function findTaxSlug($userInput, $cptSlug, $cptTaxSlug, $mode)
 		wp_reset_postdata();
 		switch ($mode)
 		{
-			case 1:
+			case "part":
 				//比對輸入字串與taxonomy部分符合
 				foreach ($term as $value)
 				{
@@ -49,7 +49,7 @@ function findTaxSlug($userInput, $cptSlug, $cptTaxSlug, $mode)
 					return $findCompareSlug;//傳回slug
 				}
 			break;
-			case 2:
+			case "full":
 				//比對輸入字串與taxonomy完全相符
 				foreach ($term as $value)
 				{
