@@ -55,12 +55,12 @@ function main_function( $userInput ) {
         $mode = "full"; //存在使用者輸入tax 轉換使用者輸入
     }
     else {
-        $mode = 0;
+        $mode = "null";
     }
 
     //依據使用者輸入 分配至不同流程
     switch ( $mode ) {
-        case 0:
+        case "null":
             return "請輸入tax或name進行搜尋";
             break;
         //模糊比對
