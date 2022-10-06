@@ -2,54 +2,110 @@
 
 /* Area */
 ul#area-tabs-nav {
-  list-style: none;
+  text-align: center;
+  list-style-type: none;
   margin: 0;
-  padding: 10px;
   overflow: auto;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 20px;
 }
 
 ul#area-tabs-nav li {
+  position: relative;
+  display: block;
   float: left;
-  font-weight: bold;
-}
-
-ul#area-tabs-nav li a {
-  text-decoration: none;
-  padding: 10px 30px;
-  margin: 5px;
-  border: 1px solid #9D212B;
+  /*條例項目呈現水平排列*/
+  margin-top: 5px;
+  margin-left: 1.6%;
+  margin-right: auto;
+  margin-bottom: 5px;
+  border: 2px solid #9D212B;
   border-radius: 5px;
   box-shadow: 2px 2px #238cb3;
 }
 
+ul#area-tabs-nav li a {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #9D212B;
+  text-decoration: none;
+  /*將超連結的底線去除*/
+  border-radius: 5px;
+  padding: 4px 30px 4px 30px;
+  outline: none;
+}
+
+ul#area-tabs-nav li:has(a.active) {
+  color: #F5BB00;
+  background-color: #9F2121;
+  border: 2px solid #e0c573;
+}
+
 ul#area-tabs-nav li a.active {
-  background-color: #9D212B;
+  color: #F5BB00;
+}
+
+ul#area-tabs-nav li:hover {
+  color: #F5BB00;
+  background-color: #9F2121;
+  border: 2px solid #e0c573;
+}
+
+ul#area-tabs-nav li:hover a {
+  color: #F5BB00;
 }
 
 /* City */
 ul#city-tabs-nav {
-  list-style: none;
+  text-align: center;
+  list-style-type: none;
   margin: 0;
-  padding: 10px;
+  padding: 0;
   overflow: auto;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  padding-inline-start: 20px;
 }
 
 ul#city-tabs-nav li {
+  position: relative;
+  display: block;
   float: left;
-  font-weight: bold;
+  margin-top: 5px;
+  margin-left: 1.3%;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px #238cb3;
+  background-color: #DDB758;
+  border: 2px solid #DDB758;
 }
 
 ul#city-tabs-nav li a {
+  color: #5C4742;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
   text-decoration: none;
-  padding: 10px 30px;
-  margin: 5px;
-  border: 1px solid #9D212B;
-  border-radius: 5px;
-  box-shadow: 2px 2px #238cb3;
+  padding: 3px 12px 3px 12px;
+  border-radius: 10px;
+  outline: none;
 }
 
-ul#city-tabs-nav li a.active {
-  background-color: #9D212B;
+ul#city-tabs-nav li:has(a.active) {
+  background-color: #E7AD99;
+  border: 2px solid #9d212b;
+}
+
+ul#city-tabs-nav li:hover {
+  background-color: #E7AD99;
+  border: 2px solid #9d212b;
 }
 
 /*Company*/
@@ -98,14 +154,44 @@ a {
     width: 100%;
   }
 
-  ul#tabs-nav li {
-    padding: 5px;
+  .grid-item-text p {
+    font-size: 18px;
   }
 
-  ul#tabs-nav li a {
-    margin: 5px;
-    font-size: 5px;
-    padding: 10px;
+  ul#area-tabs-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+  }
+
+  ul#area-tabs-nav li {
+    padding: 3px 12px 3px 12px;
+    margin-top: 5px;
+    margin-left: 1%;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+
+  ul#area-tabs-nav li a {
+    font-size: 22px;
+  }
+
+  ul#city-tabs-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+  }
+
+  ul#city-tabs-nav li {
+    margin-top: 5px;
+    margin-left: 0%;
+    margin-right: auto;
+    margin-bottom: 5px;
+    padding: 2px;
+  }
+
+  ul#city-tabs-nav li a {
+    font-size: 18px;
   }
 
 }
