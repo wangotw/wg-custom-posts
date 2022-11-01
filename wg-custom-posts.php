@@ -3,7 +3,7 @@
 Plugin Name: WG Custom Posts
 Plugin URI: https://www.iwangoweb.com/
 Description: 客製化版型Query Posts，包裝成帶有參數之短碼。
-Version: 1.2.1
+Version: 1.2.2
 Author: 玩構網路
 Author URI: https://www.iwangoweb.com/about/
 */
@@ -15,6 +15,7 @@ Author URI: https://www.iwangoweb.com/about/
 //v0.7 20220819 修正 cptQuery.php : 新增加入資料比對，取得不重複資料
 //v0.8 20220926 修改模糊比對顯示邏輯，修改為按照地區顯示全台縣市金融機構。
 //v1.2.1 20221006 修改CSS樣式
+//v1.2.2 20221101 屏東市 -> 屏東縣
 //一共5個function  分別用途：1.主程式整合 2.(後端)使用者輸入name轉成slug 3.(後端)轉換後的slug進行搜尋商家 4.(前端)顯示商家資訊 5.引入外部CSS檔
 /*整合用主程式*/
 
