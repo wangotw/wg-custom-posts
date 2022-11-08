@@ -8,7 +8,7 @@ function findTaxSlug($userInput, $cptSlug, $cptTaxSlug, $mode)
 	//搜尋條件
 	$query_string = array(
 		'post_type' => $cptSlug, 
-		'post_per_page' => -1, 
+		'posts_per_page' => -1, 
 		 $cptTaxSlug => '', 
    	);
 	

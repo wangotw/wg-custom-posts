@@ -16,7 +16,7 @@ function cptQuery( $cptSlug, $taxSlug, $cptTaxSlug, $post_per_page, $mode ) {
 				$query_string = array(
 					'post_type' => $cptSlug,  //cpt slug的名稱
 					$cptTaxSlug => $value,  //tax slug名稱
-					'post_per_page' => $post_per_page, //搜尋所有文章
+					'posts_per_page' => $post_per_page, //搜尋所有文章
 				);
 				$queryCategory = new WP_Query($query_string); //搜尋分類內容
 
@@ -47,7 +47,7 @@ function cptQuery( $cptSlug, $taxSlug, $cptTaxSlug, $post_per_page, $mode ) {
 			$query_string = array(
 				'post_type' => $cptSlug,  //cpt slug的名稱
 				$cptTaxSlug => $taxSlug,  //tax slug名稱
-				'post_per_page' => $post_per_page, 
+				'posts_per_page' => $post_per_page, 
 			);
 
 			$queryCategory = new WP_Query($query_string); //搜尋分類內容
